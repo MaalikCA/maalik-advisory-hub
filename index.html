@@ -1,100 +1,1097 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maalik Advisory Hub | Bookkeeping Services</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f3eb;
-            color: #34352e;
-        }
-        header {
-            padding: 25px 8%;
-            background: #e5e8d9;
-        }
-        header h2 { margin: 0; color: #354536; }
-        nav { margin-top: 18px; }
-        nav a {
-            margin-right: 20px;
-            color: #34352e;
-            text-decoration: none;
-        }
-        .hero {
-            padding: 100px 8%;
-            background: #e5e8d9;
-        }
-        .hero h1 {
-            font-size: 46px;
-            max-width: 650px;
-        }
-        .hero p {
-            font-size: 18px;
-            line-height: 1.7;
-            max-width: 600px;
-        }
-        .button {
-            display: inline-block;
-            background: #49334d;
-            color: white;
-            padding: 14px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        section { padding: 65px 8%; }
-        footer {
-            padding: 25px;
-            text-align: center;
-            background: #354536;
-            color: white;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maalik Advisory Hub | Accounting & Data Analytics</title>
+
+<meta name="description" content="Maalik Advisory Hub provides bookkeeping, accounting, financial reporting, data analytics and business intelligence support.">
+
+<style>
+:root {
+    --green: #354b3d;
+    --sage: #e8ede3;
+    --cream: #f8f7f1;
+    --plum: #49364e;
+    --text: #303a32;
+    --muted: #69746b;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.section-tag {
+    color: var(--plum);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2;
+    color: var(--green);
+    margin-bottom: 18px;
+}
+
+.section-description {
+    color: var(--muted);
+    max-width: 650px;
+}
+
+/* NAVIGATION */
+
+header {
+    background: var(--sage);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #d9e0d4;
+}
+
+.navbar {
+    min-height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: var(--green);
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--plum);
+}
+
+.nav-contact {
+    background: var(--plum);
+    color: white !important;
+    padding: 11px 18px;
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 27px;
+    color: var(--green);
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    background: var(--sage);
+    padding: 100px 0 105px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.hero-label {
+    display: inline-block;
+    background: #d9e3d5;
+    color: var(--green);
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.12;
+    color: var(--green);
+    margin-bottom: 23px;
+}
+
+.hero h1 span {
+    color: var(--plum);
+}
+
+.hero p {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 570px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--plum);
+    color: white;
+    padding: 14px 25px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: 1px solid var(--plum);
+}
+
+.button:hover {
+    background: var(--green);
+    border-color: var(--green);
+    transform: translateY(-2px);
+}
+
+.button-outline {
+    background: transparent;
+    color: var(--green);
+    border-color: #8c9b8b;
+    margin-left: 10px;
+}
+
+.button-outline:hover {
+    color: white;
+}
+
+.hero-card {
+    background: var(--green);
+    color: white;
+    border-radius: 14px;
+    padding: 38px;
+    box-shadow: 0 18px 45px rgba(38, 59, 44, 0.15);
+}
+
+.hero-card .small {
+    color: #c7d6c8;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-card h2 {
+    font-size: 27px;
+    line-height: 1.3;
+    margin: 15px 0;
+}
+
+.hero-card p {
+    color: #d5dfd4;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.hero-stat {
+    border-top: 1px solid #65796a;
+    padding-top: 17px;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+/* TRUST STRIP */
+
+.trust-strip {
+    background: var(--plum);
+    color: white;
+    padding: 23px 0;
+    text-align: center;
+}
+
+.trust-strip p {
+    font-size: 13px;
+    letter-spacing: 1.3px;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.about-visual {
+    background: var(--sage);
+    border-radius: 12px;
+    padding: 45px 30px;
+    min-height: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-visual .initials {
+    font-size: 75px;
+    font-weight: 800;
+    color: var(--green);
+    line-height: 1;
+}
+
+.about-visual h3 {
+    color: var(--plum);
+    margin-top: 20px;
+}
+
+.about-visual p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.about-text p {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.about-points {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.about-points div {
+    background: #eeeee7;
+    padding: 12px;
+    border-radius: 5px;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* SERVICES */
+
+.services {
+    background: #edf0e9;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 42px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 9px;
+    border: 1px solid #e4e7df;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(42, 60, 44, 0.09);
+}
+
+.service-number {
+    color: var(--plum);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.service-card h3 {
+    color: var(--green);
+    font-size: 19px;
+    margin: 15px 0 10px;
+}
+
+.service-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* EXPERTISE */
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.expertise-box {
+    background: var(--sage);
+    padding: 32px;
+    border-radius: 10px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skill-list span {
+    background: white;
+    border: 1px solid #dce3d8;
+    color: var(--green);
+    padding: 9px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.expertise-text p {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+/* WHY CHOOSE */
+
+.why-section {
+    background: var(--green);
+    color: white;
+}
+
+.why-section .section-title {
+    color: white;
+}
+
+.why-section .section-tag {
+    color: #d3c2d7;
+}
+
+.why-section .section-description {
+    color: #d7dfd7;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.why-card {
+    border: 1px solid #657a69;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.why-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.why-card p {
+    color: #d5dfd5;
+    font-size: 14px;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+    background: var(--cream);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 40px;
+}
+
+.portfolio-card {
+    background: white;
+    border: 1px solid #e5e6df;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.portfolio-placeholder {
+    background: var(--sage);
+    height: 165px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.portfolio-info {
+    padding: 22px;
+}
+
+.portfolio-info h3 {
+    color: var(--green);
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.portfolio-info p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.coming-soon {
+    display: inline-block;
+    margin-top: 13px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--plum);
+    font-weight: bold;
+}
+
+/* CONTACT */
+
+.contact {
+    background: var(--sage);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.contact-text p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.contact-card {
+    background: white;
+    padding: 32px;
+    border-radius: 10px;
+}
+
+.contact-card h3 {
+    color: var(--green);
+    margin-bottom: 12px;
+}
+
+.contact-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #293c30;
+    color: white;
+    padding: 35px 0;
+    text-align: center;
+}
+
+footer h3 {
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #c8d3c8;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin: 18px 0;
+}
+
+.footer-links a {
+    font-size: 13px;
+    color: #e0e8df;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 850px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 81px;
+        left: 0;
+        right: 0;
+        background: var(--sage);
+        padding: 25px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        border-bottom: 1px solid #d9e0d4;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .expertise-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .hero-card {
+        margin-top: 10px;
+    }
+
+    .services-grid,
+    .why-grid,
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .section {
+        padding: 65px 0;
+    }
+
+    .services-grid,
+    .why-grid,
+    .portfolio-grid,
+    .about-points {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .button {
+        margin-bottom: 10px;
+    }
+
+    .button-outline {
+        margin-left: 0;
+    }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h2>Maalik Advisory Hub</h2>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <div class="container navbar">
+
+        <a href="#home" class="logo">
+            MAALIK
+            <span>ADVISORY HUB</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation" aria-expanded="false">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact" class="nav-contact">Contact</a></li>
+        </ul>
+
+    </div>
 </header>
 
-<div class="hero" id="home">
-    <h1>Reliable Bookkeeping & Financial Support</h1>
-    <p>
-        Helping businesses maintain accurate financial records,
-        understand their numbers and make informed decisions.
-    </p>
-    <a class="button" href="#contact">Contact Me</a>
+<main>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+    <div class="container hero-grid">
+
+        <div>
+            <span class="hero-label">
+                ACCOUNTING · BOOKKEEPING · DATA ANALYTICS
+            </span>
+
+            <h1>
+                Clarity in Numbers.
+                <span>Confidence in Decisions.</span>
+            </h1>
+
+            <p>
+                Supporting businesses with organized financial records,
+                meaningful data insights and practical reporting solutions
+                to help them understand their numbers and make informed decisions.
+            </p>
+
+            <a href="#services" class="button">Explore Services →</a>
+            <a href="#contact" class="button button-outline">Contact Me</a>
+        </div>
+
+        <div class="hero-card">
+            <span class="small">Maalik Advisory Hub</span>
+
+            <h2>
+                Turning Financial Data into Meaningful Business Insights.
+            </h2>
+
+            <p>
+                Accounting support, financial reporting and data-driven
+                solutions designed to bring greater clarity to business operations.
+            </p>
+
+            <div class="hero-stat">
+                Accounting & Bookkeeping
+            </div>
+
+            <div class="hero-stat">
+                Data Analytics & Visualization
+            </div>
+
+            <div class="hero-stat">
+                Financial Reporting & Insights
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="trust-strip">
+    <div class="container">
+        <p>
+            ACCOUNTING · FINANCIAL REPORTING · BUSINESS INTELLIGENCE · DATA ANALYTICS
+        </p>
+    </div>
 </div>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am a CA student at CAF level with practical knowledge
-        of bookkeeping and accounting software.
-    </p>
+<!-- ABOUT -->
+
+<section class="section" id="about">
+    <div class="container about-grid">
+
+        <div class="about-visual">
+            <div class="initials">MM</div>
+            <h3>Muhammad Maalik</h3>
+            <p>CA Student | Accounting & Data Analytics Enthusiast</p>
+        </div>
+
+        <div class="about-text">
+            <div class="section-tag">ABOUT ME</div>
+
+            <h2 class="section-title">
+                Combining Accounting Knowledge with Technology.
+            </h2>
+
+            <p>
+                Welcome to Maalik Advisory Hub. I am Muhammad Maalik,
+                a Chartered Accountancy student at the CAF level with
+                an interest in accounting, financial reporting and business analytics.
+            </p>
+
+            <p>
+                My focus is on understanding financial information,
+                organizing accounting records and using technology
+                to transform data into useful business insights.
+            </p>
+
+            <p>
+                Through continuous learning and practical projects,
+                I aim to develop solutions that help businesses
+                improve financial visibility and understand their performance.
+            </p>
+
+            <div class="about-points">
+                <div>✓ Accounting Knowledge</div>
+                <div>✓ Financial Reporting</div>
+                <div>✓ Data Visualization</div>
+                <div>✓ Continuous Learning</div>
+            </div>
+        </div>
+
+    </div>
 </section>
 
-<section id="services">
-    <h2>Our Services</h2>
-    <p>Bookkeeping, bank reconciliation, financial reporting
-       and accounting software support.</p>
+<!-- SERVICES -->
+
+<section class="section services" id="services">
+    <div class="container">
+
+        <div class="section-tag">WHAT I OFFER</div>
+
+        <h2 class="section-title">Services & Solutions</h2>
+
+        <p class="section-description">
+            Practical accounting and data solutions to support
+            financial organization, reporting and business understanding.
+        </p>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <span class="service-number">01 / ACCOUNTING</span>
+                <h3>Bookkeeping Services</h3>
+                <p>
+                    Recording financial transactions, maintaining
+                    organized records and preparing essential
+                    bookkeeping information.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <span class="service-number">02 / RECONCILIATION</span>
+                <h3>Bank Reconciliation</h3>
+                <p>
+                    Comparing financial records with bank statements
+                    to identify differences and maintain accurate balances.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <span class="service-number">03 / REPORTING</span>
+                <h3>Financial Reporting</h3>
+                <p>
+                    Organizing financial information into meaningful
+                    reports to support business understanding and decisions.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <span class="service-number">04 / ANALYTICS</span>
+                <h3>Data Analytics</h3>
+                <p>
+                    Data cleaning, analysis and interpretation
+                    to identify patterns, trends and useful insights.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <span class="service-number">05 / BI SOLUTIONS</span>
+                <h3>Dashboards & Visualization</h3>
+                <p>
+                    Transforming data into clear visual reports
+                    and interactive dashboards for better understanding.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <span class="service-number">06 / DATA</span>
+                <h3>Data Management & Modeling</h3>
+                <p>
+                    Structuring, organizing and modeling data
+                    to support reliable reporting and analysis workflows.
+                </p>
+            </div>
+
+        </div>
+    </div>
 </section>
 
-<section id="contact">
-    <h2>Get in Touch</h2>
-    <p>Contact me to discuss your bookkeeping requirements.</p>
+<!-- EXPERTISE -->
+
+<section class="section" id="expertise">
+    <div class="container expertise-grid">
+
+        <div class="expertise-text">
+            <div class="section-tag">TECHNICAL CAPABILITIES</div>
+
+            <h2 class="section-title">
+                Tools & Technology
+            </h2>
+
+            <p>
+                Technology plays an important role in modern accounting
+                and business analysis. I am developing practical
+                capabilities with accounting, spreadsheet and
+                business intelligence tools.
+            </p>
+
+            <p>
+                My learning and project work focus on using these
+                tools for financial records, data preparation,
+                analysis, modeling and reporting.
+            </p>
+        </div>
+
+        <div class="expertise-box">
+
+            <h3 style="color:var(--green)">Areas of Expertise</h3>
+
+            <div class="skill-list">
+                <span>Microsoft Excel 365</span>
+                <span>Power BI</span>
+                <span>QuickBooks Online</span>
+                <span>Xero</span>
+                <span>Sage</span>
+                <span>Financial Reporting</span>
+                <span>Data Cleaning</span>
+                <span>Data Modeling</span>
+                <span>Data Visualization</span>
+                <span>Business Analytics</span>
+                <span>Reconciliation</span>
+                <span>Data Management</span>
+            </div>
+
+        </div>
+    </div>
 </section>
+
+<!-- WHY CHOOSE -->
+
+<section class="section why-section">
+    <div class="container">
+
+        <div class="section-tag">OUR APPROACH</div>
+
+        <h2 class="section-title">
+            A Practical Approach to Business Information.
+        </h2>
+
+        <p class="section-description">
+            The objective is not just to organize information,
+            but to make it easier to understand and use.
+        </p>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <h3>Accuracy & Organization</h3>
+                <p>
+                    Giving importance to structured financial
+                    records and clear information.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <h3>Technology-Driven Work</h3>
+                <p>
+                    Using modern accounting and analytical
+                    tools to improve reporting workflows.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <h3>Business Understanding</h3>
+                <p>
+                    Focusing on useful information that helps
+                    businesses understand their financial position
+                    and performance.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+
+<section class="section portfolio" id="portfolio">
+    <div class="container">
+
+        <div class="section-tag">MY WORK</div>
+
+        <h2 class="section-title">Portfolio & Projects</h2>
+
+        <p class="section-description">
+            A dedicated space for practical projects, dashboards,
+            financial reports and accounting work.
+            Project examples will be added here.
+        </p>
+
+        <div class="portfolio-grid">
+
+            <div class="portfolio-card">
+                <div class="portfolio-placeholder">
+                    Excel Projects
+                </div>
+                <div class="portfolio-info">
+                    <h3>Excel & Financial Analysis</h3>
+                    <p>
+                        Spreadsheet-based financial analysis
+                        and reporting projects.
+                    </p>
+                    <span class="coming-soon">PROJECTS COMING SOON</span>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-placeholder">
+                    Power BI Dashboards
+                </div>
+                <div class="portfolio-info">
+                    <h3>Data Analytics & BI</h3>
+                    <p>
+                        Data visualization, analytical dashboards
+                        and business reporting.
+                    </p>
+                    <span class="coming-soon">PROJECTS COMING SOON</span>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-placeholder">
+                    Accounting Projects
+                </div>
+                <div class="portfolio-info">
+                    <h3>Bookkeeping & Reporting</h3>
+                    <p>
+                        Practical accounting software and
+                        financial reporting examples.
+                    </p>
+                    <span class="coming-soon">PROJECTS COMING SOON</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section contact" id="contact">
+    <div class="container contact-grid">
+
+        <div class="contact-text">
+            <div class="section-tag">GET IN TOUCH</div>
+
+            <h2 class="section-title">
+                Let's Discuss Your Business Requirements.
+            </h2>
+
+            <p>
+                Whether you need bookkeeping support,
+                financial reporting or help understanding
+                your business data, I would be glad to discuss
+                your requirements.
+            </p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Start a Conversation</h3>
+
+            <p>
+                Contact me to discuss your bookkeeping,
+                accounting or data analytics requirements.
+            </p>
+
+            <!-- Add your WhatsApp number here before publishing -->
+            <a class="button" href="#"
+               onclick="alert('WhatsApp contact details will be added soon.'); return false;">
+                Contact via WhatsApp
+            </a>
+
+            <p style="margin-top:20px; margin-bottom:0;">
+                Facebook Page: Maalik Advisory Hub
+            </p>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
 
 <footer>
-    © 2026 Maalik Advisory Hub. All rights reserved.
+    <div class="container">
+
+        <h3>MAALIK ADVISORY HUB</h3>
+
+        <p>
+            Accounting | Bookkeeping | Financial Reporting | Data Analytics
+        </p>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <p>
+            © 2026 Maalik Advisory Hub. All rights reserved.
+        </p>
+
+    </div>
 </footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function() {
+    navLinks.classList.toggle("active");
+
+    const expanded = navLinks.classList.contains("active");
+    menuToggle.setAttribute("aria-expanded", expanded);
+});
+
+document.querySelectorAll(".nav-links a").forEach(function(link) {
+    link.addEventListener("click", function() {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+    });
+});
+</script>
 
 </body>
 </html>
